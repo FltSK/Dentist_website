@@ -1,0 +1,17 @@
+#Adres satırından girilen değer sayfa yoksa yönlendirme yapıyoruz 
+ErrorDocument 404 http://localhost/minedent/404.html
+
+
+RewriteEngine On
+
+# Tek tek elle yazabiliriz
+#RewriteRule iletisim$ anasayfa.php?sayfa=iletisim
+#RewriteRule doktorlar$ anasayfa.php?sayfa=doktorlar
+
+# Veya değişken kullanabiliriz 
+
+RewriteRule anasayfa$ index.php
+RewriteRule ^([0-9a-zA-Z-_]+)$ anasayfa.php?sayfa=$1
+
+RewriteRule doktor/([0-9a-zA-Z-_]+)/([0-9a-zA-Z-_]+)$ anasayfa.php?sayfa=doktor&id=$2
+

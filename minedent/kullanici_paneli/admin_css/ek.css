@@ -1,0 +1,15 @@
+.doktor_sil_button {
+    display: inline-block;
+    padding: 3px 10px;
+    background-color: #d62828;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.doktor_sil_button:hover {
+    color: #ffffff; 
+    text-decoration: none; 
+}
